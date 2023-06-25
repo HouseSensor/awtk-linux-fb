@@ -50,11 +50,11 @@ elif lcd_devices_is_egl(LCD_DEVICES) :
   LCD='FB_GL'
   NANOVG_BACKEND='GLES2'
 
-#INPUT_ENGINE='null'
+INPUT_ENGINE='null'
 #INPUT_ENGINE='spinyin'
 #INPUT_ENGINE='t9'
 #INPUT_ENGINE='t9ext'
-INPUT_ENGINE='pinyin'
+#INPUT_ENGINE='pinyin'
 
 COMMON_CCFLAGS=' -DHAS_STD_MALLOC -DHAS_STDIO -DHAS_FAST_MEMCPY -DWITH_VGCANVAS -DWITH_UNICODE_BREAK -DLINUX'
 COMMON_CCFLAGS=COMMON_CCFLAGS+' -DLOAD_ASSET_WITH_MMAP=1 -DWITH_SOCKET=1 '
@@ -107,15 +107,15 @@ OS_FLAGS='-Wall -Os -fno-strict-aliasing '
 #TSLIB_LIB_DIR=joinPath(TK_LINUX_FB_ROOT, '3rd/tslib/src/.libs')
 
 #for prebuild tslib
-TSLIB_LIB_DIR='/opt/28x/tslib/lib'
-TSLIB_INC_DIR='/opt/28x/tslib/include'
-TOOLS_PREFIX='/opt/28x/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi/bin/arm-linux-'
+TSLIB_LIB_DIR='/home/alexf/work/HouseSensor/Tina-Linux/out/t113-mq_r/staging_dir/target/usr/lib'
+TSLIB_INC_DIR='/home/alexf/work/HouseSensor/Tina-Linux/out/t113-mq_r/staging_dir/target/usr/include'
+#TOOLS_PREFIX='/opt/28x/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi/bin/arm-linux-'
 
 #TOOLS_PREFIX='/opt/poky/1.7/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-'
 
 #for qemu
-TOOLS_PREFIX='/opt/qemu/buildroot-2021.02.2/output/host/bin/arm-linux-'
-TSLIB_LIB_DIR=''
+TOOLS_PREFIX='../Tina-Linux/prebuilt/gcc/linux-x86/arm/toolchain-sunxi-musl/toolchain/bin/arm-openwrt-linux-'
+# TSLIB_LIB_DIR=''
 
 
 #TSLIB_LIB_DIR=''
