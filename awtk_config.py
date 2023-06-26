@@ -107,14 +107,14 @@ OS_FLAGS='-Wall -Os -fno-strict-aliasing '
 #TSLIB_LIB_DIR=joinPath(TK_LINUX_FB_ROOT, '3rd/tslib/src/.libs')
 
 #for prebuild tslib
-TSLIB_LIB_DIR='/home/alexf/work/HouseSensor/Tina-Linux/out/t113-mq_r/staging_dir/target/usr/lib'
-TSLIB_INC_DIR='/home/alexf/work/HouseSensor/Tina-Linux/out/t113-mq_r/staging_dir/target/usr/include'
+TSLIB_LIB_DIR=os.path.realpath('../Tina-Linux/out/t113-mq_r/staging_dir/target/usr/lib')
+TSLIB_INC_DIR=os.path.realpath('../Tina-Linux/out/t113-mq_r/staging_dir/target/usr/include')
 #TOOLS_PREFIX='/opt/28x/gcc-4.4.4-glibc-2.11.1-multilib-1.0/arm-fsl-linux-gnueabi/bin/arm-linux-'
 
 #TOOLS_PREFIX='/opt/poky/1.7/sysroots/x86_64-pokysdk-linux/usr/bin/arm-poky-linux-gnueabi/arm-poky-linux-gnueabi-'
 
 #for qemu
-TOOLS_PREFIX='../Tina-Linux/prebuilt/gcc/linux-x86/arm/toolchain-sunxi-musl/toolchain/bin/arm-openwrt-linux-'
+TOOLS_PREFIX=os.path.realpath('../Tina-Linux/prebuilt/gcc/linux-x86/arm/toolchain-sunxi-musl/toolchain/bin/arm-openwrt-linux-')
 # TSLIB_LIB_DIR=''
 
 
